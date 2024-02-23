@@ -11,9 +11,10 @@ const Login = () => {
   }
 
   return (
-    <div className='flex justify-center h-[440px] items-center'>
-      <div className=' w-[950px] flex justify-between '>
-        <form method='post' className='w-[330px] h-[400px] bg-red-500 border-solid border-2 border-black rounded-3xl flex flex-col gap-4 text-justify'>
+    
+    <div className='flex justify-center h-[525px] items-center'>
+      <div className=' w-[950px] flex gap-[150px] '>
+        <form method='post' className='w-[330px] h-[400px] bg-red-500 border-solid border-2 border-black rounded-3xl flex flex-col gap-4 text-justify ml-10'>
           <div className='text-center text-white text-xl mt-3'><h3>Log In</h3></div>
           <div className=' flex flex-col gap-4 ml-6'>
             <div className='text-white flex gap-3 ml-6'>
@@ -29,16 +30,21 @@ const Login = () => {
 
             {userType === 'hospital' ? (
               <>
+              
                 <div className='flex gap-1'>
                   <label className='text-white ml-0'>Hospital Id:</label>
                   <input type="text" />
                 </div>
+                
+              
               </>
             ) : (
               <>
                 <div className='flex gap-1 '>
                   <label className='text-white ml-6'>User Id:</label><input type="text" />
                 </div>
+                
+                
               </>
             )}
 
@@ -56,9 +62,15 @@ const Login = () => {
           </div>
         </form>
 
-        <img className='w-[350px] h-[300px]' src="../second-icons/hlogin.jpg" alt="" />
+        {userType === 'hospital' ? (
+                <img className='w-[350px] h-[300px] mt-5' src="../second-icons/hlogin.jpg" alt="" />
+        ) : (
+          <img className='w-[350px] h-[300px] mt-5' src="../second-icons/dlogin.jpg" alt="" />
+        )}
+        
       </div>
     </div>
+   
   )
 }
 

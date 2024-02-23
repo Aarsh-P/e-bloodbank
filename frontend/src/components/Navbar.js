@@ -4,7 +4,7 @@ import {NavLink}from 'react-router-dom';
 
 function Navbar() {
   return (
-    <div className='w-screen'>
+    <div className='w-screen overflow-hidden scroll-mx-0'>
       <div className='bg-red-700 w-screen flex flex-row justify-center flex-wrap min-h-12'>
         <div className='w-[1100px] flex justify-between mt-2 text-white flex-wrap'>
             <div className='flex gap-2'>

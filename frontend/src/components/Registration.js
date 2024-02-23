@@ -48,9 +48,9 @@ const Registration = () => {
   }; 
 
   return (
-    <div className='flex justify-center h-[570px] items-center'>
-      <div className='w-[950px] flex justify-between'>
-        <form onSubmit={handleSubmit} method='post' className={`w-[390px] h-[${getFormHeight()}] bg-red-500 border-solid border-2 border-black rounded-3xl flex flex-col gap-4 text-justify`}>
+    <div className='flex justify-center h-[524px] items-center'>
+      <div className='w-[950px] flex gap-[100px]'>
+        <form onSubmit={handleSubmit} method='post' className={`w-[390px] h-[${getFormHeight()}] bg-red-500 border-solid border-2 border-black rounded-3xl flex flex-col gap-4 text-justify ml-10 mt-3`}>
           <div className='text-center text-white text-xl mt-4'><h3>Registration</h3></div>
           <div className='flex flex-col gap-3 ml-6'>
             <div className='text-white flex gap-3 ml-12'>
@@ -88,6 +88,11 @@ const Registration = () => {
                   <label className='text-white ml-3'>Donor Name:</label>
                   <input type="text" name="donorName" value={formData.donorName} onChange={handleChange} />
                 </div>
+                <div className='flex gap-1'>
+                  <label className='text-white ml-3'>Blood Group:</label>
+                  <input type="text" name="bloodgroup" value={formData.bloodgroup} onChange={handleChange} />
+                </div>
+                
               </>
             )}
 
@@ -113,7 +118,11 @@ const Registration = () => {
             </div>
           </div>
         </form>
-        <img className='w-[350px] h-[300px]' src="../second-icons/hlogin.jpg" alt="" />
+        {userType === 'hospital' ? (
+                <img className='w-[350px] h-[300px] mt-5' src="../second-icons/hlogin.jpg" alt="" />
+        ) : (
+          <img className='w-[350px] h-[300px] mt-5' src="../second-icons/dlogin.jpg" alt="" />
+        )}
       </div>
     </div>
   );
