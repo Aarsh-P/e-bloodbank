@@ -171,6 +171,11 @@ const Registration = () => {
                     className='px-2 py-1 rounded-lg'
                   />
                 </div>
+                <div className='flex gap-1'>
+                  <label className='text-white ml-3'>Blood Group:</label>
+                  <input type="text" name="bloodgroup" value={formData.bloodgroup} onChange={handleChange} />
+                </div>
+                
               </>
             )}
             <div className='flex flex-col gap-1'>

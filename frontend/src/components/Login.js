@@ -54,6 +54,8 @@ const Login = () => {
                 <label className={`${userType === 'hospital' ? 'text-black' : 'text-white'}`}>Hospital Id:</label>
                   <input type="text" className={`${userType === 'hospital' ? 'text-white' : 'text-black'} input-field px-2 py-1 rounded-tl-lg rounded-br-xl w-[300px]`}required/>
                 </div>
+                
+              
               </>
             ) : (
               <>
@@ -61,6 +63,8 @@ const Login = () => {
                 <label className={`${userType === 'hospital' ? 'text-black' : 'text-white'}`}>User Id:</label>
                   <input type="text" className={`${userType === 'hospital' ? 'text-white' : 'text-black'} input-field px-2 py-1 rounded-tl-lg rounded-br-xl w-[300px]`} required/>
                 </div>
+                
+                
               </>
             )}
 

@@ -70,6 +70,8 @@ function About() {
                     <a href=''>Register Now!!</a>
                 </p>
             </div>
+        
+       
         </>
     );
 }

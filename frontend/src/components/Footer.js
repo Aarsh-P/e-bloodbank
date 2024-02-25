@@ -4,6 +4,7 @@ import chart from '../assets/flat-map-icon-28.jpg'
 
 function Footer() {
   return (
+
     <div className='h-[190px] bg-slate-800 flex justify-center'>
 
       <div className='flex w-[1100px] justify-evenly mt-6'>
@@ -11,6 +12,7 @@ function Footer() {
           <pre>Contact Us</pre>
           <pre>9714030703</pre>
           <pre>sdsaddc@gmail.com</pre>
+
         </div>
         <div className='text-white border-r-2 p-8 mb-3'>
           <pre>Address</pre>
