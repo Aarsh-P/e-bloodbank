@@ -18,14 +18,13 @@ function About() {
                 }, index * 200); // Adjust the delay as needed
             });
         };
-
         addTypingAnimation();
     }, []);
 
     return (
         <>
-            <div className='my-8 text-center'>
-                <p className='text-2xl text-black bg-red-400 p-4 rounded-md mb-4'>
+            <div className='my-8 text-center items-center'>
+                <p className='text-2xl text-black bg-red-400 p-4 m-1 rounded-md mb-4'>
                     Welcome to <span className='font-bold text-green-300 typing-animation'>{typingContent}</span>, where compassion meets action! We are a passionate and dedicated team committed to making a positive impact on people's lives through the noble act of blood donation.
                 </p>
                 <div className='text-black'>
@@ -67,6 +66,8 @@ function About() {
                 <h3 className='text-3xl font-bold mb-4 text-blue-500'>Join Us in the Journey</h3>
                 <p className='text-gray-800 text-2xl'>
                     Whether you are an experienced blood donor or considering donating for the first time, E-BloodBank welcomes you with open arms. Together, we can create a world where no one has to suffer due to a shortage of blood.
+                    <br></br>
+                    <a href=''>Register Now!!</a>
                 </p>
             </div>
         </>

@@ -26,18 +26,19 @@ router.post('/api/register/donor', async (req, res) => {
 
   router.post('/api/register/hospital', async (req, res) => {
     try {
-        const exisitingHospital = await Hospital.findOne({ email: req.body.email });
+      let { hospitalName, hospitalId, email, password, address  } = req.body;
+
+        const exisitingHospital = await Hospital.findOne({ email });
         if (exisitingHospital) {
-            return res.status(200).send({
+            return res.status(200).json({
               success: false,
               message: "Hospital Already exists",
             });
           }
 
-      const { hospitalName, hospitalId, email, password, address  } = req.body;
-      const newHospital = new Hospital({ hospitalName, hospitalId, email, password, address  });
-      await newHospital.save();
-      return res.status(201).json({ message: 'Hospital registered successfully' });
+      const newHospital = await Hospital.create({ hospitalName, hospitalId, email, password, address  });
+      // await newHospital.save();
+      return res.status(201).json({ newHospital, message: 'Hospital registered successfully' });
     } catch (error) {
       console.error(error);
       return res.status(500).json({ error: 'Internal server error' });

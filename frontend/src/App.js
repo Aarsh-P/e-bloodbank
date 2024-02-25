@@ -1,4 +1,4 @@
-import './App.css';
+// import './App.css'
 import React from 'react';
 import Navbar from './components/Navbar';
 import About from './components/About';
@@ -12,14 +12,14 @@ function App() {
   return (
     <>
       <Navbar></Navbar>
-      <div className="container my-4 mx-7">
+
         <Routes>
           <Route path='/' element={<Home></Home> } />
           <Route path='About' element={<About />} />
           <Route path='Login' element={<Login />} />
           <Route path='SignUp' element={<Registration />} />
         </Routes>
-      </div>
+     
       <Footer></Footer>
     </>
   );

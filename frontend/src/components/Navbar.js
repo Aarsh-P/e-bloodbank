@@ -1,14 +1,15 @@
 import React from 'react'
 import {NavLink}from 'react-router-dom';
+import microscope from '../assets/microscope.png'
 
 
 function Navbar() {
   return (
-    <div className='w-screen'>
-      <div className='bg-red-700 w-screen flex flex-row justify-center flex-wrap min-h-12'>
-        <div className='w-[1100px] flex justify-between mt-2 text-white flex-wrap'>
+    <div className='j'>
+      <div className='bg-red-700 flex flex-row justify-center flex-wrap min-h-12'>
+        <div className='w-[1400px] flex justify-between mt-2 text-white flex-wrap'>
             <div className='flex gap-2'>
-            <img  className='h-8 w-8'src="../second-icons/microscope.png" alt="" />
+            <img  className='h-8 w-8'src={microscope} alt="" />
            
             <div className='text-xl'>Blood Donation</div>
             </div>

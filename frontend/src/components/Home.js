@@ -5,9 +5,10 @@ import Second from './Second';
 function Home() {
     return (
         <>
+        
         <First></First>
-      <Second></Second>
-     
+      
+      
         </>
     )
 }
