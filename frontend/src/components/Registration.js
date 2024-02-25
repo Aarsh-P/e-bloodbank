@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 import hlogin from '../assets/hlogin1.jpg'
 import dlogin from '../assets/dlogin1.png'
+import { useNavigate } from 'react-router-dom';
 
 const Registration = () => {
   const [userType, setUserType] = useState('hospital');
@@ -35,6 +36,7 @@ const Registration = () => {
     setUserType(event.target.value);
   };
 
+
   const getFormHeight = () => {
     return userType === 'hospital' ? '100px' : '1000px';
   };
@@ -55,10 +57,13 @@ const Registration = () => {
       // Handle registration failure, e.g., show an error message
     }
   };
-
+  const navigate=useNavigate();
+  function clickHandler(){
+    navigate("/")
+  }
   return (
     <div className={`flex flex-row ${userType === 'hospital' ? 'bg-sky-100' : 'bg-rose-100'}`}>
-      <div className='flex-1 m-1 p-5 w-[50px] h-[1100px] items-center flex flex-col rounded-3xl'>
+      <div className='flex-1 m-1 p-5 w-[50px] h-[1200px] items-center flex flex-col rounded-3xl'>
         <form onSubmit={handleSubmit} className={`flex flex-col gap-3 p-4 text-justify border-1 border-black rounded-3xl ${userType === 'hospital' ? 'bg-green-400' : 'bg-sky-950'} w-[500px]`}>
           <div className={`text-center ${userType === 'hospital' ? 'text-black' : 'text-white'} text-3xl mb-4`}><h3>Registration</h3></div>
           <div className='ml-10 flex flex-col gap-4'>
@@ -200,7 +205,7 @@ const Registration = () => {
             </div>
           </div>
           <div className='flex gap-4 mt-4 justify-center'>
-            <button className={`w-full md:w-[120px] h-[40px] ${userType === 'hospital' ? 'bg-gradient-to-r from-sky-600 to-blue-950' : 'bg-gradient-to-r from-green-400 to-green-600'} text-white rounded-md shadow-md`}>Sign Up</button>
+            <button className={`w-full md:w-[120px] h-[40px] ${userType === 'hospital' ? 'bg-gradient-to-r from-sky-600 to-blue-950' : 'bg-gradient-to-r from-green-400 to-green-600'} text-white rounded-md shadow-md`} onClick={clickHandler}>Sign Up</button>
           </div>
           <hr className={`${userType === 'hospital' ? 'mr-5' : 'text-white'}`}></hr>
           <div className={`${userType === 'hospital' ? 'text-black' : 'text-white'} flex gap-2 justify-center`}>
